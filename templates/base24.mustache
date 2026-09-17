@@ -1,0 +1,66 @@
+# tinted-shell ({{scheme-system}}) {{scheme-name}} for PowerShell
+# scheme made by {{scheme-author}}
+
+$Env:BASE24_THEME = "{{scheme-slug}}"
+
+Write-Host -NoNewline "`e]4;0;rgb:{{base00-hex-r}}/{{base00-hex-g}}/{{base00-hex-b}}`e\" # base00
+Write-Host -NoNewline "`e]4;1;rgb:{{base08-hex-r}}/{{base08-hex-g}}/{{base08-hex-b}}`e\" # base08
+Write-Host -NoNewline "`e]4;2;rgb:{{base0B-hex-r}}/{{base0B-hex-g}}/{{base0B-hex-b}}`e\" # base0B
+Write-Host -NoNewline "`e]4;3;rgb:{{base0A-hex-r}}/{{base0A-hex-g}}/{{base0A-hex-b}}`e\" # base0A
+Write-Host -NoNewline "`e]4;4;rgb:{{base0D-hex-r}}/{{base0D-hex-g}}/{{base0D-hex-b}}`e\" # base0D
+Write-Host -NoNewline "`e]4;5;rgb:{{base0E-hex-r}}/{{base0E-hex-g}}/{{base0E-hex-b}}`e\" # base0E
+Write-Host -NoNewline "`e]4;6;rgb:{{base0C-hex-r}}/{{base0C-hex-g}}/{{base0C-hex-b}}`e\" # base0C
+Write-Host -NoNewline "`e]4;7;rgb:{{base05-hex-r}}/{{base05-hex-g}}/{{base05-hex-b}}`e\" # base05
+
+Write-Host -NoNewline "`e]4;8;rgb:{{base03-hex-r}}/{{base03-hex-g}}/{{base03-hex-b}}`e\" # base03
+Write-Host -NoNewline "`e]4;9;rgb:{{base12-hex-r}}/{{base12-hex-g}}/{{base12-hex-b}}`e\" # base12
+Write-Host -NoNewline "`e]4;10;rgb:{{base14-hex-r}}/{{base14-hex-g}}/{{base14-hex-b}}`e\" # base14
+Write-Host -NoNewline "`e]4;11;rgb:{{base13-hex-r}}/{{base13-hex-g}}/{{base13-hex-b}}`e\" # base13
+Write-Host -NoNewline "`e]4;12;rgb:{{base16-hex-r}}/{{base16-hex-g}}/{{base16-hex-b}}`e\" # base16
+Write-Host -NoNewline "`e]4;13;rgb:{{base17-hex-r}}/{{base17-hex-g}}/{{base17-hex-b}}`e\" # base17
+Write-Host -NoNewline "`e]4;14;rgb:{{base15-hex-r}}/{{base15-hex-g}}/{{base15-hex-b}}`e\" # base15
+Write-Host -NoNewline "`e]4;15;rgb:{{base07-hex-r}}/{{base07-hex-g}}/{{base07-hex-b}}`e\" # base07
+
+Write-Host -NoNewline "`e]4;16;rgb:{{base09-hex-r}}/{{base09-hex-g}}/{{base09-hex-b}}`e\" # base09
+Write-Host -NoNewline "`e]4;17;rgb:{{base0F-hex-r}}/{{base0F-hex-g}}/{{base0F-hex-b}}`e\" # base0F
+Write-Host -NoNewline "`e]4;18;rgb:{{base01-hex-r}}/{{base01-hex-g}}/{{base01-hex-b}}`e\" # base01
+Write-Host -NoNewline "`e]4;19;rgb:{{base02-hex-r}}/{{base02-hex-g}}/{{base02-hex-b}}`e\" # base02
+Write-Host -NoNewline "`e]4;20;rgb:{{base04-hex-r}}/{{base04-hex-g}}/{{base04-hex-b}}`e\" # base04
+Write-Host -NoNewline "`e]4;21;rgb:{{base06-hex-r}}/{{base06-hex-g}}/{{base06-hex-b}}`e\" # base06
+# Write-Host -NoNewline "`e]4;22;rgb:{{base10-hex-r}}/{{base10-hex-g}}/{{base10-hex-b}}`e\" # base10
+# Write-Host -NoNewline "`e]4;23;rgb:{{base11-hex-r}}/{{base11-hex-g}}/{{base11-hex-b}}`e\" # base11
+
+Write-Host -NoNewline "`e]10;rgb:{{base05-hex-r}}/{{base05-hex-g}}/{{base05-hex-b}}`e\" # base05
+
+if ($Env:BASE24_SHELL_SET_BACKGROUND -ne "false") {
+    Write-Host -NoNewline "`e]11;rgb:{{base00-hex-r}}/{{base00-hex-g}}/{{base00-hex-b}}`e\" # base00
+}
+
+Write-Host -NoNewline "`e]12;rgb:{{base05-hex-r}}/{{base05-hex-g}}/{{base05-hex-b}}`e\" # base05
+
+if ($(Test-Path "Env:TINTED_SHELL_ENABLE_BASE24_VARS")) {
+    $Env:BASE24_COLOR_00_HEX = "{{base00-hex}}"
+    $Env:BASE24_COLOR_01_HEX = "{{base01-hex}}"
+    $Env:BASE24_COLOR_02_HEX = "{{base02-hex}}"
+    $Env:BASE24_COLOR_03_HEX = "{{base03-hex}}"
+    $Env:BASE24_COLOR_04_HEX = "{{base04-hex}}"
+    $Env:BASE24_COLOR_05_HEX = "{{base05-hex}}"
+    $Env:BASE24_COLOR_06_HEX = "{{base06-hex}}"
+    $Env:BASE24_COLOR_07_HEX = "{{base07-hex}}"
+    $Env:BASE24_COLOR_08_HEX = "{{base08-hex}}"
+    $Env:BASE24_COLOR_09_HEX = "{{base09-hex}}"
+    $Env:BASE24_COLOR_0A_HEX = "{{base0A-hex}}"
+    $Env:BASE24_COLOR_0B_HEX = "{{base0B-hex}}"
+    $Env:BASE24_COLOR_0C_HEX = "{{base0C-hex}}"
+    $Env:BASE24_COLOR_0D_HEX = "{{base0D-hex}}"
+    $Env:BASE24_COLOR_0E_HEX = "{{base0E-hex}}"
+    $Env:BASE24_COLOR_0F_HEX = "{{base0F-hex}}"
+    $Env:BASE24_COLOR_10_HEX = "{{base10-hex}}"
+    $Env:BASE24_COLOR_11_HEX = "{{base11-hex}}"
+    $Env:BASE24_COLOR_12_HEX = "{{base12-hex}}"
+    $Env:BASE24_COLOR_13_HEX = "{{base13-hex}}"
+    $Env:BASE24_COLOR_14_HEX = "{{base14-hex}}"
+    $Env:BASE24_COLOR_15_HEX = "{{base15-hex}}"
+    $Env:BASE24_COLOR_16_HEX = "{{base16-hex}}"
+    $Env:BASE24_COLOR_17_HEX = "{{base17-hex}}"
+}

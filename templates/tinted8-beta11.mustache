@@ -1,0 +1,60 @@
+# tinted-shell ({{scheme.system}}) {{scheme.name}} for PowerShell
+# scheme made by {{scheme.author}}
+
+$Env:TINTED8_THEME = "{{scheme.slug}}"
+
+Write-Host -NoNewline "`e]4;0;rgb:{{palette.black.normal.hex-r}}/{{palette.black.normal.hex-g}}/{{palette.black.normal.hex-b}}`e\"
+Write-Host -NoNewline "`e]4;1;rgb:{{palette.red.normal.hex-r}}/{{palette.red.normal.hex-g}}/{{palette.red.normal.hex-b}}`e\"
+Write-Host -NoNewline "`e]4;2;rgb:{{palette.green.normal.hex-r}}/{{palette.green.normal.hex-g}}/{{palette.green.normal.hex-b}}`e\"
+Write-Host -NoNewline "`e]4;3;rgb:{{palette.yellow.normal.hex-r}}/{{palette.yellow.normal.hex-g}}/{{palette.yellow.normal.hex-b}}`e\"
+Write-Host -NoNewline "`e]4;4;rgb:{{palette.blue.normal.hex-r}}/{{palette.blue.normal.hex-g}}/{{palette.blue.normal.hex-b}}`e\"
+Write-Host -NoNewline "`e]4;5;rgb:{{palette.magenta.normal.hex-r}}/{{palette.magenta.normal.hex-g}}/{{palette.magenta.normal.hex-b}}`e\"
+Write-Host -NoNewline "`e]4;6;rgb:{{palette.cyan.normal.hex-r}}/{{palette.cyan.normal.hex-g}}/{{palette.cyan.normal.hex-b}}`e\"
+Write-Host -NoNewline "`e]4;7;rgb:{{palette.white.normal.hex-r}}/{{palette.white.normal.hex-g}}/{{palette.white.normal.hex-b}}`e\"
+
+Write-Host -NoNewline "`e]4;8;rgb:{{palette.black.bright.hex-r}}/{{palette.black.bright.hex-g}}/{{palette.black.bright.hex-b}}`e\"
+Write-Host -NoNewline "`e]4;9;rgb:{{palette.red.bright.hex-r}}/{{palette.red.bright.hex-g}}/{{palette.red.bright.hex-b}}`e\"
+Write-Host -NoNewline "`e]4;10;rgb:{{palette.green.bright.hex-r}}/{{palette.green.bright.hex-g}}/{{palette.green.bright.hex-b}}`e\"
+Write-Host -NoNewline "`e]4;11;rgb:{{palette.yellow.bright.hex-r}}/{{palette.yellow.bright.hex-g}}/{{palette.yellow.bright.hex-b}}`e\"
+Write-Host -NoNewline "`e]4;12;rgb:{{palette.blue.bright.hex-r}}/{{palette.blue.bright.hex-g}}/{{palette.blue.bright.hex-b}}`e\"
+Write-Host -NoNewline "`e]4;13;rgb:{{palette.magenta.bright.hex-r}}/{{palette.magenta.bright.hex-g}}/{{palette.magenta.bright.hex-b}}`e\"
+Write-Host -NoNewline "`e]4;14;rgb:{{palette.cyan.bright.hex-r}}/{{palette.cyan.bright.hex-g}}/{{palette.cyan.bright.hex-b}}`e\"
+Write-Host -NoNewline "`e]4;15;rgb:{{palette.white.bright.hex-r}}/{{palette.white.bright.hex-g}}/{{palette.white.bright.hex-b}}`e\"
+
+Write-Host -NoNewline "`e]10;rgb:{{ui.global.normal.foreground.hex-r}}/{{ui.global.normal.foreground.hex-g}}/{{ui.global.normal.foreground.hex-b}}`e\"
+
+if ($Env:TINTED8_SHELL_SET_BACKGROUND -ne "false") {
+    Write-Host -NoNewline "`e]11;rgb:{{ui.global.normal.background.hex-r}}/{{ui.global.normal.background.hex-g}}/{{ui.global.normal.background.hex-b}}`e\"
+}
+
+# Write-Host -NoNewline "`e]12;rgb:{{ui.cursor.normal.foreground.hex-r}}/{{ui.cursor.normal.foreground.hex-g}}/{{ui.cursor.normal.foreground.hex-b}}`e\"
+Write-Host -NoNewline "`e]12;rgb:{{ui.global.normal.foreground.hex-r}}/{{ui.global.normal.foreground.hex-g}}/{{ui.global.normal.foreground.hex-b}}`e\"
+
+if ($(Test-Path "Env:TINTED_SHELL_ENABLE_TINTED8_VARS")) {
+    $Env:TINTED8_COLOR_BLACK_NORMAL_HEX = "{{palette.black.normal.hex}}"
+    $Env:TINTED8_COLOR_RED_NORMAL_HEX = "{{palette.red.normal.hex}}"
+    $Env:TINTED8_COLOR_GREEN_NORMAL_HEX = "{{palette.green.normal.hex}}"
+    $Env:TINTED8_COLOR_YELLOW_NORMAL_HEX = "{{palette.yellow.normal.hex}}"
+    $Env:TINTED8_COLOR_BLUE_NORMAL_HEX = "{{palette.blue.normal.hex}}"
+    $Env:TINTED8_COLOR_MAGENTA_NORMAL_HEX = "{{palette.magenta.normal.hex}}"
+    $Env:TINTED8_COLOR_CYAN_NORMAL_HEX = "{{palette.cyan.normal.hex}}"
+    $Env:TINTED8_COLOR_WHITE_NORMAL_HEX = "{{palette.white.normal.hex}}"
+
+    $Env:TINTED8_COLOR_BLACK_BRIGHT_HEX = "{{palette.black.bright.hex}}"
+    $Env:TINTED8_COLOR_RED_BRIGHT_HEX = "{{palette.red.bright.hex}}"
+    $Env:TINTED8_COLOR_GREEN_BRIGHT_HEX = "{{palette.green.bright.hex}}"
+    $Env:TINTED8_COLOR_YELLOW_BRIGHT_HEX = "{{palette.yellow.bright.hex}}"
+    $Env:TINTED8_COLOR_BLUE_BRIGHT_HEX = "{{palette.blue.bright.hex}}"
+    $Env:TINTED8_COLOR_MAGENTA_BRIGHT_HEX = "{{palette.magenta.bright.hex}}"
+    $Env:TINTED8_COLOR_CYAN_BRIGHT_HEX = "{{palette.cyan.bright.hex}}"
+    $Env:TINTED8_COLOR_WHITE_BRIGHT_HEX = "{{palette.white.bright.hex}}"
+
+    $Env:TINTED8_COLOR_BLACK_DIM_HEX = "{{palette.black.dim.hex}}"
+    $Env:TINTED8_COLOR_RED_DIM_HEX = "{{palette.red.dim.hex}}"
+    $Env:TINTED8_COLOR_GREEN_DIM_HEX = "{{palette.green.dim.hex}}"
+    $Env:TINTED8_COLOR_YELLOW_DIM_HEX = "{{palette.yellow.dim.hex}}"
+    $Env:TINTED8_COLOR_BLUE_DIM_HEX = "{{palette.blue.dim.hex}}"
+    $Env:TINTED8_COLOR_MAGENTA_DIM_HEX = "{{palette.magenta.dim.hex}}"
+    $Env:TINTED8_COLOR_CYAN_DIM_HEX = "{{palette.cyan.dim.hex}}"
+    $Env:TINTED8_COLOR_WHITE_DIM_HEX = "{{palette.white.dim.hex}}"
+}
